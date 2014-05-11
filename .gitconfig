@@ -1,0 +1,10 @@
+[user]
+	name = Sam DeCesare
+	email = sam@samdecesare.com
+[core]
+	editor = vim
+	excludesfile = /Users/sam/.gitignore_global
+[pull]
+	rebase = true
+[push]
+	default = simple
