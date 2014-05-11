@@ -39,3 +39,13 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nnoremap <leader>j <C-]>
 ",k go up the tag definition chain
 nnoremap <leader>k <C-t>
+"Navigate splits without c-w first
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <c-l> <c-w>l
+nnoremap <c-H> <c-w>H
+nnoremap <c-J> <c-w>J
+nnoremap <c-K> <c-w>K
+nnoremap <C-L> <C-w>L
+
