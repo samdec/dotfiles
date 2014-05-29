@@ -8,6 +8,7 @@ filetype plugin indent on
 syntax enable
 set guifont=Inconsolata:h18
 set background=dark
+set hlsearch
 
 set foldmethod=syntax
 set foldcolumn=2
