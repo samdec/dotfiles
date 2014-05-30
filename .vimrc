@@ -30,6 +30,9 @@ set shiftwidth=2
 set splitright
 set splitbelow
 
+"exclude directories from command-t
+:let g:commandtwildignore=&wildignore . ",**/coverage/*,**/spec/reports/*,**/tmp/*"
+
 :let mapleader = ","
 ",s spec method
 nnoremap <leader>s :!bundle exec rspec <C-R>=expand("%:p")<CR> --format nested --no-color -l <C-R>=line(".")<CR><CR>
