@@ -14,7 +14,6 @@ set foldmethod=syntax
 set foldcolumn=2
 set foldlevelstart=10
 
-set clipboard=unnamed "share clipboard with OS
 set iskeyword+=- "add dash to keywords (for e, b, *)
 set nrformats= "number increments
 set number
