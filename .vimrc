@@ -27,6 +27,7 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
+Plug 'bling/vim-airline'
 call plug#end()
 
 set nocompatible
@@ -39,6 +40,7 @@ syntax enable
 set guifont=Inconsolata:h18
 set background=dark
 set hlsearch
+let g:airline_theme = "sol"
 
 set foldmethod=syntax
 set foldcolumn=2
