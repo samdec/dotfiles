@@ -63,7 +63,7 @@ set splitbelow
 autocmd FileType cucumber,ruby,yaml,eruby,coffee autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
 "exclude directories from command-t
-:let g:commandtwildignore=&wildignore . ",**/coverage/*,**/spec/reports/*,**/tmp/*"
+:let g:commandtwildignore=&wildignore . ",**/coverage/*,**/spec/reports/*,**/tmp/*,**/node_modules/*"
 
 :let mapleader = ","
 ",s spec method
