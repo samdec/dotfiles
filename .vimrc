@@ -28,6 +28,8 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'bling/vim-airline'
+Plug 'kana/vim-operator-user'
+Plug 'rgrinberg/vim-operator-gsearch'
 call plug#end()
 
 set nocompatible
@@ -41,10 +43,6 @@ set guifont=Inconsolata:h18
 set background=dark
 set hlsearch
 let g:airline_theme = "sol"
-
-set foldmethod=syntax
-set foldcolumn=2
-set foldlevelstart=10
 
 set iskeyword+=- "add dash to keywords (for e, b, *)
 set number
@@ -80,9 +78,11 @@ nnoremap <leader>k <C-t>
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
-nnoremap <c-l> <c-w>l
-nnoremap <c-H> <c-w>H
-nnoremap <c-J> <c-w>J
-nnoremap <c-K> <c-w>K
+nnoremap <C-l> <c-w>l
+nnoremap <C-H> <c-w>H
+nnoremap <C-J> <c-w>J
+nnoremap <C-K> <c-w>K
 nnoremap <C-L> <C-w>L
 
+" Map g/ to ag search
+map g/ <Plug>(operator-ag)
