@@ -126,5 +126,10 @@ map <leader>t <c-p>
 
 map <leader>rt :TagbarToggle<CR>
 
-inoremap ;; <Esc>
+" Shift-Y should copy to end of line, like Shift-D deletes to end of line
+noremap Y y$
 
+" Accidently hit Q too damn much
+noremap Q ""
+
+inoremap ;; <Esc>
