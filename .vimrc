@@ -51,6 +51,9 @@ filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
 set directory=/tmp "swap files
 set backupdir=/tmp,. "tilde files
 
+"" Show hidden files in NerdTREE by default
+let g:NERDTreeShowHidden=1
+
 "" Whitespace
 set tabstop=2                     " a tab is two spaces
 set shiftwidth=2                  " an autoindent (with <<) is two spaces
