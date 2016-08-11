@@ -26,13 +26,15 @@ Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'kana/vim-operator-user'
 Plug 'rgrinberg/vim-operator-gsearch'
+Plug 'wincent/command-t'
 Plug 'yegappan/greplace'
-Plug 'kien/ctrlp.vim'
 Plug 'ervandew/supertab'
 Plug 'majutsushi/tagbar'
+Plug 'elixir-lang/vim-elixir'
 call plug#end()
 
 "" Basic Setup
@@ -61,10 +63,15 @@ set expandtab                     " use spaces, not tabs
 set list                          " Show invisible characters
 
 "" GUI and Themes
-set guifont=Inconsolata:h18
+set guifont=Inconsolata_for_Powerline:h18
 set background=dark
 let g:airline_theme = "sol"
-colorscheme macvim
+let g:airline_powerline_fonts = 1
+if has('gui_running')
+  colorscheme macvim
+else
+  colorscheme elflord
+endif
 
 "" Searching
 set hlsearch    " highlight matches
@@ -73,10 +80,6 @@ set ignorecase  " searches are case insensitive...
 set smartcase   " ... unless they contain at least one capital letter
 
 set iskeyword+=- "add dash to keywords (for e, b, *)
-
-set grepprg=ag " greplace searches with Silver Searcher
-let g:grep_cmd_opts='--line-numbers --noheading'
-
 
 "" Wild settings
 
@@ -123,9 +126,6 @@ nnoremap <c-l> <c-w>l
 
 " Map g/ to ag search
 map g/ <Plug>(operator-ag)
-
-" Map ,t to ctrl-p
-map <leader>t <c-p>
 
 map <leader>rt :TagbarToggle<CR>
 
