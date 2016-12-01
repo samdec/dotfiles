@@ -1,0 +1,83 @@
+alias ber="bundle exec rspec"
+alias berc="bundle exec rails console"
+alias fs="foreman start"
+alias k9="kill -9"
+
+alias gcl='git clone'
+alias ga='git add'
+alias gall='git add .'
+alias gus='git reset HEAD'
+alias gm="git merge"
+alias g='git'
+alias get='git'
+alias gst='git status'
+alias gs='git status'
+alias gss='git status -s'
+alias gl='git pull'
+alias gpr='git pull --rebase'
+alias gpp='git pull; and git push'
+alias gup='git fetch; and git rebase'
+alias gp='git push'
+alias gpo='git push origin'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gcm='git commit -v -m'
+alias gci='git commit --interactive'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gcount='git shortlog -sn'
+alias gcp='git cherry-pick'
+alias gco='git checkout'
+alias gexport='git archive --format zip --output'
+alias gdel='git branch -D'
+alias gmu='git fetch origin -v; git fetch upstream -v; git merge upstream/master'
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
+alias gg="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+alias ggs="gg --stat"
+alias gsl="git shortlog -sn"
+alias gw="git whatchanged"
+alias gt="git tag"
+alias gta="git tag -a"
+alias gtd="git tag -d"
+alias gtl="git tag -l"
+alias gnew="git log HEAD@{1}..HEAD@{0}"
+alias gcaa="git commit -a --amend -C HEAD"
+
+
+alias be='bundle exec'
+alias bi='bundle install'
+alias bl='bundle list'
+alias bu='bundle update'
+alias bp='bundle package'
+
+alias r='rails'
+alias rg='rails g'
+alias rs='rails s'
+alias rc='rails c'
+alias rn='rails new'
+alias rb='rails dbconsole'
+alias rp='rails plugin'
+alias ra='rails application'
+alias rd='rails destroy'
+alias dbm='bundle exec rake db:migrate'
+alias devlog='tail -f log/development.log'
+
+alias sl=ls
+alias ls='ls -G'
+alias la='ls -AF'
+alias ll='ls -al'
+alias l='ls -a'
+alias l1='ls -1'
+
+alias _="sudo"
+
+alias c='clear'
+alias k='clear'
+alias cls='clear'
+
+alias q='exit'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias -- -='cd -'
