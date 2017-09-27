@@ -35,6 +35,8 @@ Plug 'yegappan/greplace'
 Plug 'ervandew/supertab'
 Plug 'majutsushi/tagbar'
 Plug 'elixir-lang/vim-elixir'
+Plug 'ElmCast/elm-vim'
+Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 "" Basic Setup
