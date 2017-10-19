@@ -127,8 +127,8 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-l> <c-w>l
 
-" Map g/ to ag search
-map g/ <Plug>(operator-ag)
+" Map g/ to ack search
+map g/ <Plug>(operator-ack)
 
 " Use Silver Searcher if available
 if executable('ag')
