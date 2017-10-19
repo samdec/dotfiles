@@ -16,8 +16,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-scripts/LargeFile'
 Plug 'airblade/vim-gitgutter'
 Plug 'kchmck/vim-coffee-script'
-Plug 'scrooloose/syntastic'
-Plug 'rking/ag.vim'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'gavinbeatty/dragvisuals.vim'
 Plug 'justinmk/vim-gtfo'
@@ -30,20 +28,23 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'kana/vim-operator-user'
 Plug 'rgrinberg/vim-operator-gsearch'
-Plug 'wincent/command-t'
 Plug 'yegappan/greplace'
 Plug 'ervandew/supertab'
 Plug 'majutsushi/tagbar'
 Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'Valloric/YouCompleteMe'
+Plug 'w0rp/ale'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'mileszs/ack.vim'
 call plug#end()
 
 "" Basic Setup
 set nocompatible      " Use vim, no vi defaults
 set number            " Show line numbers
 set ruler             " Show line and column number
-syntax enable         " Turn on syntax highlighting allowing local overrides
 set encoding=utf-8    " Set default encoding to UTF-8
 set undolevels=1000
 
@@ -129,12 +130,24 @@ nnoremap <c-l> <c-w>l
 " Map g/ to ag search
 map g/ <Plug>(operator-ag)
 
+" Use Silver Searcher if available
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 map <leader>rt :TagbarToggle<CR>
+
+" Map fzf fuzzy searches
+nmap ; :Buffers<CR>
+nmap <Leader>t :Files<CR>
+nmap <Leader>r :Tags<CR>
+nmap <Leader>a :Ag<CR>
 
 " Shift-Y should copy to end of line, like Shift-D deletes to end of line
 noremap Y y$
 
-" Accidently hit Q too damn much
-noremap Q ""
+" Accidently type Q and q: too damn much
+noremap Q <silent>
+noremap q: <silent>
 
 inoremap ;; <Esc>
