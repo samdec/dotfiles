@@ -139,7 +139,7 @@ map <leader>rt :TagbarToggle<CR>
 
 " Map fzf fuzzy searches
 nmap ; :Buffers<CR>
-nmap <Leader>t :Files<CR>
+nmap <Leader>t :GFiles<CR>
 nmap <Leader>r :Tags<CR>
 nmap <Leader>a :Ag<CR>
 
