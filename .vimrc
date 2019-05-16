@@ -33,12 +33,13 @@ Plug 'ervandew/supertab'
 Plug 'majutsushi/tagbar'
 Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'
-Plug 'Valloric/YouCompleteMe'
-Plug 'w0rp/ale'
+" Plug 'Valloric/YouCompleteMe'
+" Plug 'w0rp/ale'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mileszs/ack.vim'
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 "" Basic Setup
@@ -56,6 +57,9 @@ filetype plugin indent on " Turn on filetype plugins (:help filetype-plugin)
 set directory=/tmp "swap files
 set backupdir=/tmp,. "tilde files
 
+"" Enable mouse mode in terminal
+set mouse=a
+
 "" Show hidden files in NerdTREE by default
 let g:NERDTreeShowHidden=1
 
@@ -70,11 +74,8 @@ set guifont=Inconsolata_for_Powerline:h18
 set background=dark
 let g:airline_theme = "sol"
 let g:airline_powerline_fonts = 1
-if has('gui_running')
-  colorscheme macvim
-else
-  colorscheme elflord
-endif
+syntax enable
+colorscheme solarized
 
 "" Searching
 set hlsearch    " highlight matches
@@ -139,7 +140,7 @@ map <leader>rt :TagbarToggle<CR>
 
 " Map fzf fuzzy searches
 nmap ; :Buffers<CR>
-nmap <Leader>t :GFiles<CR>
+nmap <Leader>t :Files<CR>
 nmap <Leader>r :Tags<CR>
 nmap <Leader>a :Ag<CR>
 
