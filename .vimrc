@@ -113,9 +113,9 @@ autocmd FileType cucumber,ruby,yaml,eruby,coffee autocmd BufWritePre <buffer> :c
 let mapleader = ","
 
 ",s spec method
-nnoremap <leader>s :Dispatch bundle exec rspec <C-R>=expand("%:p")<CR> --format nested -l <C-R>=line(".")<CR><CR>
+nnoremap <leader>s :Dispatch bin/rspec <C-R>=expand("%:p")<CR>:<C-R>=line(".")<CR> --format progress <CR>
 ",S spec file
-nnoremap <leader>S :Dispatch bundle exec rspec <C-r>=expand("%:p")<CR> --format nested <CR>
+nnoremap <leader>S :Dispatch bin/rspec <C-r>=expand("%:p")<CR> --format progress <CR>
 ",n toggle NERDTree
 nnoremap <leader>n :NERDTreeToggle<CR>
 ",j go to tag definition
